@@ -16,7 +16,7 @@ export const DisadvantageView = (
       <StatusBar backgroundColor="#22c55e" />
 
       <AppBar
-        title="Desvantagens"
+        title="Desvantagens do Biogás"
         leftButton={
           <ActionButton onPress={handleGoBack}>
             <MaterialIcons name="arrow-back" size={24} color="#FFF" />
@@ -39,47 +39,93 @@ export const DisadvantageView = (
         </View>
 
         <View className="gap-4 px-5 py-5">
-          <Text.Title>Vantagens do Biogás</Text.Title>
+          <Text.Title>Desvantagens do Biogás</Text.Title>
+
+          {/* 1 */}
           <View className="flex-1">
-            <View className="flex-1 flex-row items-center gap-2">
-              <MaterialIcons name="check-box" size={24} color="#22c55e" />
+            <View className="flex-row items-center gap-2">
+              <MaterialIcons name="warning" size={24} color="#ef4444" />
               <Text.Body className="font-semibold">
-                Energia limpa e renovável:{" "}
+                Alto custo inicial de implantação:
               </Text.Body>
             </View>
 
             <Text.Body>
-              O biogás é uma alternativa sustentável aos combustíveis fósseis,
-              pois é produzido a partir de resíduos orgânicos e não agride o
-              meio ambiente.
+              A instalação de biodigestores e sistemas de purificação de biogás
+              requer investimentos elevados, especialmente em pequena escala.
+              Segundo o Ministério de Minas e Energia (MME, 2023), o custo
+              inicial pode superar o retorno em até cinco anos, dependendo da
+              tecnologia e do volume de resíduos disponíveis.
             </Text.Body>
           </View>
+
+          {/* 2 */}
           <View className="flex-1">
-            <View className="flex-1 flex-row items-center gap-2">
-              <MaterialIcons name="check-box" size={24} color="#22c55e" />
+            <View className="flex-row items-center gap-2">
+              <MaterialIcons name="warning" size={24} color="#ef4444" />
               <Text.Body className="font-semibold">
-                Redução de gases do efeito estufa:{" "}
+                Necessidade de manejo adequado dos resíduos:
               </Text.Body>
             </View>
 
             <Text.Body>
-              Ao reaproveitar resíduos que liberariam metano na natureza, o
-              biogás ajuda a diminuir a emissão de gases poluentes responsáveis
-              pelo quecimento global
+              O processo exige controle rigoroso da temperatura, umidade e tipo
+              de resíduo utilizado. A Embrapa (2022) alerta que o uso incorreto
+              pode gerar odores desagradáveis e até contaminação do solo e da
+              água por efluentes mal tratados.
             </Text.Body>
           </View>
+
+          {/* 3 */}
           <View className="flex-1">
-            <View className="flex-1 flex-row items-center gap-2">
-              <MaterialIcons name="check-box" size={24} color="#22c55e" />
+            <View className="flex-row items-center gap-2">
+              <MaterialIcons name="warning" size={24} color="#ef4444" />
               <Text.Body className="font-semibold">
-                Aproveitamento de resíduos orgânicos:{" "}
+                Produção variável de energia:
               </Text.Body>
             </View>
 
             <Text.Body>
-              Restos de comida, esterco e lixo orgânico deixam de ser problema e
-              se transformam em fonte de energia, reduzindo a quantidade de lixo
-              nos aterros.
+              A geração de biogás depende diretamente da quantidade e da
+              qualidade dos resíduos orgânicos. Em épocas de baixa oferta, a
+              produção de energia pode cair significativamente, o que torna o
+              sistema menos previsível em comparação com fontes tradicionais
+              (IEA Bioenergy, 2022).
+            </Text.Body>
+          </View>
+
+          {/* 4 */}
+          <View className="flex-1">
+            <View className="flex-row items-center gap-2">
+              <MaterialIcons name="warning" size={24} color="#ef4444" />
+              <Text.Body className="font-semibold">
+                Manutenção e operação especializadas:
+              </Text.Body>
+            </View>
+
+            <Text.Body>
+              O funcionamento eficiente do biodigestor requer acompanhamento
+              técnico constante e manutenção periódica. Falhas operacionais
+              podem comprometer a produção e causar emissões indesejadas de
+              metano, um gás 28 vezes mais potente que o CO₂ em efeito estufa
+              (IPCC, 2021).
+            </Text.Body>
+          </View>
+
+          {/* 5 */}
+          <View className="flex-1">
+            <View className="flex-row items-center gap-2">
+              <MaterialIcons name="warning" size={24} color="#ef4444" />
+              <Text.Body className="font-semibold">
+                Limitações logísticas:
+              </Text.Body>
+            </View>
+
+            <Text.Body>
+              O transporte de resíduos orgânicos e do biogás gerado pode ser
+              economicamente inviável em regiões rurais ou distantes de centros
+              consumidores, reduzindo a competitividade do biogás em relação a
+              outras fontes energéticas (EPE, 2023).
             </Text.Body>
           </View>
 
