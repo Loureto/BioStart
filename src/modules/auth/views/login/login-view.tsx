@@ -1,12 +1,14 @@
 import { TextField } from "@/components";
 import { Button } from "@/components/ui/button";
 import { IconButton } from "@/components/ui/icon-button";
+import { useState } from "react";
 import { Text, View } from "react-native";
 import { Container, Header, Title } from "./components";
 import { useLoginModel } from "./login-model";
 
 export const LoginView = (methods: ReturnType<typeof useLoginModel>) => {
   const { control, onSubmit, handleSignUp } = methods;
+  const [visible, setVisible] = useState(true);
 
   return (
     <Container>
@@ -28,8 +30,14 @@ export const LoginView = (methods: ReturnType<typeof useLoginModel>) => {
               label="Senha"
               control={control}
               inputName="password"
+              secureTextEntry={visible}
               placeholder="Informe sua senha"
-              endIcon={<IconButton icon="visibility" />}
+              endIcon={
+                <IconButton
+                  icon="visibility"
+                  onPress={() => setVisible(!visible)}
+                />
+              }
             />
 
             <Button label="Entrar" onPress={onSubmit} />
